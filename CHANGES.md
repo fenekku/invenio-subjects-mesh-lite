@@ -1,5 +1,14 @@
 # Changes
 
+Version 2026.11.24.0 (released 2026-11-24)
+
+*Breaking changes*
+- adopt invenio-subjects-mesh-common 0.5.0 - `invenio galter_subjects mesh deltas` CLI changes
+
+*Other changes*
+- update listing to MeSH 2026-10-22
+- lint: transition to ruff
+
 Version 2026.1.27.1 (released 2026-08-11)
 
 - Make compatible with InvenioRDM v14
