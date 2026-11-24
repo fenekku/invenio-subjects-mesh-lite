@@ -68,10 +68,13 @@ Alternatively, or if you want to update your already loaded subjects to a new li
 # Download up-to-date listings
 uv run invenio galter_subjects mesh download -d /path/to/downloads/storage/ -y YEAR
 # Generate file containg deltas to transition your instance to the downloaded listing
-uv run invenio galter_subjects mesh deltas -d /path/to/downloads/storage/ -y YEAR -f topic -o deltas_mesh.csv
+# /path/to/replacement/file is the file provided by MeSH (e.g., replace2026.txt)
+uv run invenio galter_subjects mesh deltas -r /path/to/replacement/file -o deltas_mesh.csv
 # Update your instance - *this operation will modify your instance*
 uv run invenio galter_subjects update deltas_mesh.csv
 ```
+
+A specific subject file can be passed to `galter_subjects mesh deltas` via `--subjects-file /path/to/mesh/file` instead of using the shipped MeSH file (the default).
 
 Look at the help text for these commands to see additional options that can be passed.
 In particular, options for `galter_subjects update` allow you to store renamed, replaced or removed subjects on records according to a template of your choice.
